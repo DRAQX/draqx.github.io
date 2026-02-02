@@ -3,17 +3,34 @@
 html, body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; scroll-behavior: smooth;}
 body { background: #0b0f14; color: #e7eef7; }
 
-.nav {
-  position: fixed; top: 0; left: 0; right: 0;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 14px 22px;
-  background: rgba(11,15,20,.55);
-  backdrop-filter: blur(10px);
-  z-index: 10;
+.navigationBar {
+  position: fixed; top: 0; left: 0; width: 100%;
+  display: flex;
+  align-items: center; /* hepsinin yatay olarak aynı hizada olması için. */
+  padding: 14px 10px;  
+  justify-content:center;
+  background: rgb(11,15,20);
+  z-index: 336;
 }
-.nav a { color: #e7eef7; text-decoration: none; margin-left: 14px; opacity: .9; }
-.nav a:hover { opacity: 1; }
-.brand { letter-spacing: 1px; font-weight: 700; margin-left: 0 !important; }
+
+.navigationBar a { color: #e7eef7; text-decoration: none; margin-left: 14px; opacity: .9; }
+.navigationBar a:hover { opacity: 1; }
+
+.navigationBar nav {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-51%); /*  translateX -> x eksenine göre hizalamak için */
+  gap: 10px;
+}
+
+.userName { letter-spacing: 1px; font-weight: 700; margin-left: 0 !important; }
+
+.social {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
 
 .hero {
   position: relative;
@@ -47,22 +64,31 @@ body { background: #0b0f14; color: #e7eef7; }
 }
 .btn.primary { background: rgba(231,238,247,.12); }
 
-.scroll-hint {
-  position: absolute;
-  bottom: 18px;
-  opacity: .7;
-  z-index: 1;
+.section {
+  padding: 20px 20px;
+  max-width: 90%;
+  margin: 36px auto;
+  border-radius:36px;
+  scroll-margin-top: 50px;
 }
 
-.section {
-  padding: 60px 20px;
-  max-width: 100%;
-  margin: 0 auto;
+.section-title {
+  font-size: 2.2rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+  margin-top: 0;
+  text-align: center;
 }
-.section-color1 {  background-color: rgba(240, 248, 255,0.2);}
-.section h2 { margin-top: 0;  text-align: center;}
+
+.section-subtitle {
+  max-width: 700px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+.section-colored {  background-color: rgba(240, 248, 255,0.2);}
 .sectionContent {display: flex; }
-.section * img {height: auto; max-height: 400px; width: auto; margin: 50px, 0px;}
+.sectionImage {height: auto; max-height: 400px; width: auto; margin: 50px, 0px; border-radius: 0px 0px 0px 25px;}
 
 
 /* Canvas */
@@ -70,4 +96,80 @@ body { background: #0b0f14; color: #e7eef7; }
   position: fixed;
   inset: 0;
   z-index: -1;
+}
+
+/* border radius ekle
+full bant yapma
+*/
+
+@media only screen and (max-width: 800px)
+{
+  section * img { display: none; }
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.skill-card {
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.skill-icon {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.skill-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0.92;
+}
+
+.skill-card li {
+  padding: 6px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+  font-size: 0.95rem;
+}
+
+.skill-card li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
