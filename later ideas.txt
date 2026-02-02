@@ -1,0 +1,2 @@
+add hyperlinks to skill cards to see related examples/projects?
+scroll-margin-top: 49px; DÜZELT!

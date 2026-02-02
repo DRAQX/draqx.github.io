@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRAQX</title> <!-- Version 0.001 -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  
+  <!-- Header -->
+  <header class="navigationBar">
+    <a class="userName" href="#top">DRAQX</a>
+  
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+    </nav>
+    
+    <div class="social">
+      <a href="https://github.com/draqx" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/umurmamat" target="_blank">LinkedIn</a>
+    </div>
+  </header>
+
+  <body>
+    
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+  
+    <main id="top" class="mainBody">
+      <!-- HERO -->
+      <section class="hero">
+        <div id="tsparticles" class="hero-bg"></div>
+      
+        <div class="hero-content">
+          <h1 class="hero-title">Umur MAMAT</h1>
+          <p class="hero-subtitle">C# / WPF • VBA • Unity • Automation • MS Excel</p>
+        
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects">See Projects</a>
+            <a class="btn" href="#about">About Me</a>
+          </div>
+        
+          <p>Welcome to my webpage! Please be advised that this website is a work in progress.</p>
+          <p>I know it is still bit ugly. I promise my apps look better than this😅</p>
+          <p>Ship first, polish later? Of course not... But I learn by trying.</p>
+          <p>So instead of ruining this chance by using templates, I will try to improve my web skills here.</p>
+          <p>But desktop apps and game dev is more fun tbh ¯\_(ツ)_/¯</p>
+        
+          <div>
+            <img src="Media/sea lion dance.gif" alt="" height="300" style="margin: 20px;">
+          </div>
+        </div>
+      
+      </section>
+    
+      <!-- SECTIONS -->
+      <section id="about" class="section section-colored">
+        <h2 class="section-title">About</h2>
+        <div class="sectionContent">
+            <img class="sectionImage" src="Media/Black-white close-up - half 2.png"/>
+            <div>
+              <p>Hey! I’m Umur — a self-taught developer who loves building practical, modern software and learning new tech by actually doing projects.</p>
+              <p>I’m not a certified engineer and I wouldn’t call myself a “pro-level developer” yet — but <b>I fully trust my algorithm and problem-solving skills</b>. I enjoy turning messy ideas into clean systems, breaking down complex problems into logical steps, and improving projects until they feel smooth and solid.</p>
+              <p>Most of my focus is on C# desktop development, especially WPF with MVVM, where I like creating minimalist, modern UI designs with dark/light themes and a structured architecture. I’m also super interested in automation, productivity tools, and building apps that can be released to real users.</p>
+              <p>And outside of coding — I’m a serious Excel Specialist. I use Excel like a weapon: advanced formulas, automation logic, data checks, reporting… basically anything data-related becomes easier when I touch it!</p>
+              <p>Right now I’m building my skills, my portfolio, and my confidence step by step — and I’m excited to create software that people genuinely enjoy using.</p>
+            </div>
+        </div>
+      </section>
+    
+      <section id="skills" class="section">
+        <div class="container">
+          <h2 class="section-title">Skills</h2>
+          <p class="section-subtitle">
+            Self-taught builder mindset — learning by doing, shipping projects, improving every iteration.
+          </p>
+        
+          <div class="skills-grid">
+            <!-- Card 1 -->
+            <div class="skill-card">
+              <div class="skill-icon">💻</div>
+              <h3>Development</h3>
+              <ul>
+                <li>C# (logic-first coding)</li>
+                <li>WPF desktop apps</li>
+                <li>MVVM architecture</li>
+                <li>Clean & maintainable structure</li>
+              </ul>
+            </div>
+          
+            <!-- Card 2 -->
+            <div class="skill-card">
+              <div class="skill-icon">🧠</div>
+              <h3>Problem Solving</h3>
+              <ul>
+                <li>Algorithmic thinking</li>
+                <li>Turning chaos into systems</li>
+                <li>Optimization mindset</li>
+                <li>Debugging & iteration</li>
+              </ul>
+            </div>
+          
+            <!-- Card 3 -->
+            <div class="skill-card">
+              <div class="skill-icon">📊</div>
+              <h3>Excel Specialist</h3>
+              <ul>
+                <li>Advanced formulas & workflows</li>
+                <li>Dashboards & reporting</li>
+                <li>Data validation / integrity checks</li>
+                <li>Automation-style spreadsheets</li>
+              </ul>
+            </div>
+          
+            <!-- Card 4 -->
+            <div class="skill-card">
+              <div class="skill-icon">🧩</div>
+              <h3>Projects</h3>
+              <ul>
+                <li>Productivity & tracking apps</li>
+                <li>Local tools & desktop utilities</li>
+                <li>Security-minded data handling</li>
+                <li>Portfolio-driven development</li>
+              </ul>
+            </div>
+          
+            <!-- Card 5 -->
+            <div class="skill-card">
+              <div class="skill-icon">🌐</div>
+              <h3>Web Basics</h3>
+              <ul>
+                <li>HTML / CSS / JavaScript</li>
+                <li>Landing pages & UI layout</li>
+                <li>Interactive sections</li>
+                <li>Modern design vibe</li>
+              </ul>
+            </div>
+          
+            <!-- Card 6 -->
+            <div class="skill-card">
+              <div class="skill-icon">⚙️</div>
+              <h3>Workflow</h3>
+              <ul>
+                <li>GitHub basics</li>
+                <li>Fast learning by building</li>
+                <li>Clean UI mindset</li>
+                <li>Constant improvements</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section id="projects" class="section section-colored">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">To be added...</p>
+        <p><i>Still trying to decide which projects would be cool to display...</i></p>
+      </section>
+    </main>
+  
+    <script src="particles.js"></script>
+    
+  </body>
+</html>
